@@ -1,0 +1,8 @@
+flask
+    pip install Flask
+    python.exe -m pip install --upgrade pip
+openai
+    pip install openai==0.28
+python-dotenv
+    pip install python-dotenv
+matplotlib

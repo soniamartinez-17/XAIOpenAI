@@ -1,0 +1,24 @@
+FIRST LINEAR REGRESSION MODEL
+
+    modelo -> quality = 8.38 + 0.01*fixed acidity -1.10*volatile acidity -0.15*citric acid -0.00*residual sugar -1.47*chlorides + 0.00*free sulfur dioxide -0.00*total sulfur dioxide -4.52*density -0.37*pH + 0.98*sulphates + 0.29*alcohol
+    label -> quality
+    feature -> fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, Alcohol
+    tipo de modelo -> regression
+     LINEAR REGRESSION
+    when we can do something about bias -> A majority of the quality values were “regular” (5 and 6), which made no significant contribution to finding an optimal model. These values made it harder to identify each factor’s different influence on a “high” or “low” quality of the wine, which was the main focus of this analysis. In order to improve our predictive model, we need more balanced data.
+
+SECOND LINEAR REGRESSION MODEL
+
+    modelo -> charges = 13346.09 + 3616.109*age - 9.393000 * sex +  2028.309 * bmi +  516.6630 * children +  9557.143 * smoker + 302.388 * region
+    label -> charges
+    feature -> age, sex, bmi, children, smoker, region
+    tipo de modelo -> regression
+     LINEAR REGRESSION
+
+THIRD LINEAR REGRESSION MODEL
+
+    modelo -> real_state_price = 38.05 -3.0790039 * house_age -5.7388054 * distance_near_mrt_station + 3.25126781 * number_of_convenience_stores + 2.92641771 * latitude -0.36641104 * longitude
+    label -> real_state_price
+    feature -> house_age, distance_near_mrt_station, number_of_convenience_stores, latitude, longitude
+    tipo de modelo regression
+    LINEAR REGRESSION

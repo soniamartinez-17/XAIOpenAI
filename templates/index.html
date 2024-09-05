@@ -1,0 +1,92 @@
+<!--
+    COLOR
+	- base color       #E5E1DA
+	- contrast color   #FBF9F1
+	- remark color     #265073
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Explainer</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Website Title -->
+            <h1>AIExplainer</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active" id="active">Explainer</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+	<!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <!-- User Input Section -->
+            <section class="user-input">
+               <h2>Insert your machine learning model</h2>
+                <form id="userForm" action="/output" method="post">
+                    <div class="form-group">
+                        <label for="equation">Formula of the model:</label>
+                        <input type="text" id="equation" name="equation" placeholder="Insert your formula here" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Select the type of machine learning model:</label>
+                        <select id="model" name="model" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="Linear Regression">Linear Regression</option>
+                            <option value="Quadratic Regression">Quadratic Regression</option>
+                            <option value="Logarithmic Regression">Logarithmic Regression</option>
+                            <option value="Exponential Regression">Exponential Regression</option>
+                            <option value="Logistical Regression">Logistical Regression</option>
+                            <option value="Support Vector Machines">Support Vector Machines</option>
+                            <option value="Decision Tree">Decision Tree</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" id="toggleLink" onclick="toggleTextInput()">Do you want to use a pre-trained model?</a>
+                        <label for="textInput"></label><input type="text" id="textInput" name="trained_model_id" placeholder="Write trained_model_id">
+                    </div>
+                    <!--
+                    <div class="form-group">
+                        <label for="fileInput">Dataframe JSON file</label>
+                        <input type="file" id="fileInput" accept=".json">
+                        <label for="fileInput" class="custom-file-upload">Click to upload the JSON file</label>
+                    </div>
+                    -->
+                    <button type="submit" id="submitBtn">explain</button>
+                </form>
+
+                <p id="confirmation">The model is training, it would take 10 to 15 minutes</p>
+            </section>
+        </div>
+    </main>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AIExplainer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../static/script.js"></script>
+</body>
+</html>

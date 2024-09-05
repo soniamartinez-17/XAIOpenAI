@@ -1,0 +1,289 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Font family for the entire site */
+    margin: 0;
+    padding: 0;
+    background-color: #FBF9F1; /* Background color for the body */
+    color: #265073; /* Text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes full height of the viewport */
+}
+
+.container {
+    width: 80%; /* Container width */
+    margin: 0 auto; /* Center align the container */
+}
+
+/* Header Styles */
+header {
+    background: #265073; /* Background color for the header */
+    color: #FBF9F1; /* Text color for the header */
+    padding: 1.75em 5px; /* Padding for the header */
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em; /* Font size for the header title */
+}
+
+/* Navigation Bar Styles */
+nav {
+    background: #E5E1DA; /* Background color for the navigation bar */
+    color: #265073; /* Text color for the navigation bar */
+    padding: 0.5em 0; /* Padding for the navigation bar */
+}
+
+nav ul {
+    padding: 0;
+    list-style: none; /* Remove bullets from list */
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Display list items in a line */
+    margin: 0 15px; /* Margin between list items */
+}
+
+nav ul li a {
+    color: #265073; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #92C7CF; /* Azul claro */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #265073; /* Azul oscuro */
+    color: #FBF9F1; /* Fondo claro */
+}
+
+/* Main Content Styles */
+main {
+    background: #E5E1DA; /* Background color for the main content */
+    padding: 20px; /* Padding for the main content */
+    margin: 20px 0; /* Margin for the main content */
+    flex: 1; /* Flex property to fill remaining space */
+}
+
+.user-input {
+    background: #FBF9F1; /* Background color for the input section */
+    padding: 20px; /* Padding for the input section */
+    margin: 10px 0; /* Margin for the input section */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.user-input h2 {
+	text-align:center;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #265073; /* azul oscuro */
+    margin-top: 0; /* Remove top margin from input section title */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Margin between form groups */
+}
+
+.form-group label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; /* Margin below labels */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px; /* Padding for inputs and textarea */
+    border: 1px solid #265073; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.form-group button {
+    background: #265073; /* Background color for the submit button */
+    color: #FBF9F1; /* Text color for the submit button */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for the submit button */
+    cursor: pointer; /* Cursor change on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Input and Select Styles */
+.form-group input[type="text"],
+.form-group select,
+.form-group input[type="file"] {
+    width: 100%;
+	padding: 10px 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white; /* Fondo claro */
+    color: #265073; /* Azul oscuro */
+    border: 1px solid #265073;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Dropdown Styles */
+.form-group select {
+	width: 100%;
+	padding: 10px 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white; /* Fondo claro */
+    color: #265073; /* Azul oscuro */
+    border: 1px solid #265073;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23265073" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 20px;
+}
+
+.form-group select:hover {
+    background-color: #92C7CF; /* Azul claro */
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: white; /* Fondo claro */
+    color: #265073; /* Azul oscuro */
+    border: 1px solid #265073;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.custom-file-upload:hover {
+    background-color: #92C7CF; /* Azul claro */
+}
+
+/* Hide the original file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Hover and focus states for input, select, and file */
+.form-group input[type="text"]:hover,
+.form-group select:hover,
+.form-group input[type="file"]:hover,
+.form-group input[type="text"]:focus,
+.form-group select:focus,
+.form-group input[type="file"]:focus {
+    border-color: #92C7CF; /* Azul claro */
+}
+
+/* Button Styles */
+button {
+    background-color: #265073; /* Azul oscuro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block; /* Make the button a block element */
+    margin-left: auto; /* Centering the button */
+    margin-right: auto; /* Centering the button */
+}
+
+button:hover {
+    background-color: #92C7CF; /* Azul claro */
+}
+
+
+/* Center the button */
+.user-input button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Return styles */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #265073;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back-link:hover {
+    background-color: #92C7CF; /* Azul claro */
+    text-decoration: none;
+}
+
+/* checkbox for not training */
+#textInput {
+    display: none;
+    margin-top: 10px;
+}
+
+#toggleLink {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+ #confirmation {
+    display: none;
+    color: green;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background: #265073; /* Background color for the footer */
+    color: #FBF9F1; /* Text color for the footer */
+    text-align: center; /* Center align the text */
+    padding: 10px 0; /* Padding for the footer */
+    margin-top: 20px; /* Margin at the top of footer */
+}
